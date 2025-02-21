@@ -21,6 +21,11 @@ pipeline {
           buildartifact('package')
               }      
             }
+      stage('publish') {
+        steps {
+          sh "mvn clean deploy"
+        }
+      }
         stage('deploy') {
         steps {
           sh "scp target/*.war root@172.31.21.230:/opt/apache-tomcat-10.1.34/webapps/"
