@@ -24,6 +24,7 @@ pipeline {
       stage('publish') {
         steps {
           sh "mvn clean deploy"
+        //  buildartifact('deploy')
         }
       }
         stage('deploy') {
