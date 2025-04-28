@@ -1,6 +1,6 @@
 //@Library('java_demo_pipeline@main') _
 pipeline {
-  agent {label 'slave2'}
+  agent any
   /*  parameters {
       string(name:'cmd1',description:'give build the command',defaultValue:'clean')
         choice(choices:['package','compile','install'],name:'cmd2')
